@@ -12,16 +12,17 @@
     letter-spacing: 1px;
     text-decoration: none;
     overflow: hidden;
-    transition: 0.2s;
 }
 
+
+/**********************Naviqasiya bari******************************/
+
 .navbar {
-    position: absolute;
+    position: sticky;
     border-radius: 5em;
     width: 100%;
     height: 80px;
-    z-index: 999;
-    background: none !important;
+    justify-content: space-between;
 }
 
 nav ul {
@@ -37,7 +38,7 @@ nav ul li {
 
 nav ul li a {
     color: white;
-    font-size: 5 px !important;
+    font-size: 5 px;
     text-transform: uppercase;
 }
 
@@ -185,6 +186,9 @@ body {
     text-size-adjust: large;
 }
 
+
+/**************Karusel*************/
+
 .carousel-thumbnails .carousel-indicators img {
     max-width: 100px;
     height: 50px;
@@ -201,4 +205,11 @@ body {
     &.active {
         border-bottom: 4px solid #fff;
     }
+}
+
+
+/*Karuselin ID-si */
+
+#carousel-thumb {
+    bottom: 100px;
 }
