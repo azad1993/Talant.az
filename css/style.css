@@ -1,215 +1,274 @@
-* {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    box-sizing: border-box;
-}
-
-.body {
-    display: inline-block;
-    position: relative;
-    color: #2196f3;
-    letter-spacing: 1px;
-    text-decoration: none;
-    overflow: hidden;
-}
-
-
-/**********************Naviqasiya bari******************************/
-
-.navbar {
-    position: sticky;
-    border-radius: 5em;
-    width: 100%;
-    height: 80px;
-    justify-content: space-between;
-}
-
-nav ul {
-    float: right;
-    margin-right: 20px;
-}
-
-nav ul li {
-    display: inline-block;
-    line-height: 80px;
-    margin: 0 5px;
-}
-
-nav ul li a {
-    color: white;
-    font-size: 5 px;
-    text-transform: uppercase;
-}
-
-.checkbtn {
-    font-size: 30px;
-    color: white;
-    float: right;
-    line-height: 80px;
-    margin-right: 40px;
-    cursor: pointer;
-    display: none;
-}
-
-#check {
-    display: none;
-}
-
-@media (max-width: 952px) {
-    nav ul li a {
-        font-size: 16px;
-    }
-    ul {
-        position: absolute;
-        width: 100%;
-        height: 100vh;
-        top: 80px;
-        text-align: center;
-        left: -100%;
-        text-align: all .5s;
-        background: #2c3e50;
-    }
-    #check:checked~ul {
-        left: 0;
-    }
-    .form-control {
-        padding: 10px 24px;
-        /* Some padding */
-        cursor: pointer;
-        /* Pointer/hand icon */
-        width: 50%;
-        /* Set a width if needed */
-        display: block;
-        height: 40px;
-    }
-    .btn {
-        padding: 10px 24px;
-        /* Some padding */
-        cursor: pointer;
-        /* Pointer/hand icon */
-        width: 50%;
-        /* Set a width if needed */
-        display: block;
-        height: 40px;
-    }
-}
-
-@media (max-width: 858px) {
-    .checkbtn {
-        display: block;
-        margin-left: auto;
-    }
-    ul {
-        position: absolute;
-        width: 100%;
-        height: 100vh;
-        top: 80px;
-        text-align: center;
-        left: -100%;
-        text-align: all .5s;
-        background: #2c3e50;
-    }
-    nav ul li {
-        display: block;
-        margin: 50px 0;
-        line-height: 30px;
-    }
-    nav.form {
-        display: block;
-    }
-    nav ul li a {
-        font-size: 20px;
-    }
-    #check:checked~ul {
-        left: 0;
-    }
-    .form-control {
-        padding: 10px 24px;
-        /* Some padding */
-        cursor: pointer;
-        /* Pointer/hand icon */
-        width: 50%;
-        /* Set a width if needed */
-        display: block;
-        height: 40px;
-    }
-    .btn {
-        padding: 10px 24px;
-        /* Some padding */
-        cursor: pointer;
-        /* Pointer/hand icon */
-        width: 50%;
-        /* Set a width if needed */
-        display: block;
-        height: 40px;
-    }
-}
-
-.nav-item a {
-    color: white !important;
-    text-shadow: #2a2a2a !important;
-}
-
-.dropdown-menu a {
-    color: #2a2a2a !important;
-}
-
-.basliq {
-    border-radius: 5em;
-}
-
-.btn {
-    color: white;
-    border-color: white;
-}
-
-.btn-outline-success:hover {
-    background-color: rgb(127, 127, 131);
-    border-color: rgb(127, 127, 131);
-    outline: none;
-    box-shadow: none;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    /* Hide vertical scrollbar */
-    align-items: center;
-    min-height: 100vh;
-}
-
-.container {
-    text-align: center;
-    font-family: 'Baloo Thambi 2', cursive;
-    text-size-adjust: large;
-}
-
-
-/**************Karusel*************/
-
-.carousel-thumbnails .carousel-indicators img {
-    max-width: 100px;
-    height: 50px;
-    overflow: hidden;
-    display: block;
-}
-
-.carousel-thumbnails .carousel-indicators li {
-    height: auto;
-    max-width: 100px;
-    width: 100px;
-    border: none;
-    box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75);
-    &.active {
-        border-bottom: 4px solid #fff;
-    }
-}
-
-
-/*Karuselin ID-si */
-
-#carousel-thumb {
-    bottom: 100px;
-}
+ * {
+     padding: 0;
+     margin: 0;
+     list-style: none;
+     box-sizing: border-box;
+ }
+ 
+ .body {
+     display: inline-block;
+     position: relative;
+     letter-spacing: 1px;
+     text-decoration: none;
+     overflow: hidden;
+ }
+ /**********************Naviqasiya bari*****************************/
+ 
+ .navbar {
+     position: absolute;
+     border-radius: 5em;
+     width: 100%;
+     height: 80px;
+     justify-content: space-between;
+ }
+ 
+ nav ul {
+     float: right;
+     margin-right: 20px;
+ }
+ 
+ nav ul li {
+     display: inline-block;
+     line-height: 80px;
+     margin: 0 5px;
+ }
+ 
+ nav ul li a {
+     color: white;
+     font-size: 5 px;
+     text-transform: uppercase;
+ }
+ 
+ .btn a,
+ .btn a:hover {
+     color: white;
+     text-decoration: none;
+ }
+ 
+ .checkbtn {
+     font-size: 30px;
+     color: white;
+     float: right;
+     line-height: 80px;
+     margin-right: 40px;
+     cursor: pointer;
+     display: none;
+ }
+ 
+ #check {
+     display: none;
+     width: 100%;
+ }
+ 
+ @media (max-width: 952px) {
+     nav ul li a {
+         font-size: 16px;
+     }
+     ul {
+         position: absolute;
+         width: 100%;
+         height: 100vh;
+         top: 80px;
+         text-align: center;
+         left: -100%;
+         text-align: all .5s;
+         background: #2c3e50;
+     }
+     #check:checked~ul {
+         left: 0;
+     }
+     .form-control {
+         padding: 10px 24px;
+         /* Some padding */
+         cursor: pointer;
+         /* Pointer/hand icon */
+         width: 50%;
+         /* Set a width if needed */
+         display: block;
+         height: 40px;
+     }
+     .btn {
+         padding: 10px 24px;
+         /* Some padding */
+         cursor: pointer;
+         /* Pointer/hand icon */
+         width: 50%;
+         /* Set a width if needed */
+         display: block;
+         height: 40px;
+     }
+ }
+ 
+ @media (max-width: 858px) {
+     .checkbtn {
+         display: block;
+         margin-left: auto;
+     }
+     ul {
+         position: absolute;
+         width: 100%;
+         height: 100vh;
+         top: 80px;
+         text-align: center;
+         left: -100%;
+         text-align: all .5s;
+         background: #2c3e50;
+     }
+     nav ul li {
+         display: block;
+         margin: 50px 0;
+         line-height: 30px;
+     }
+     nav.form {
+         display: block;
+     }
+     nav ul li a {
+         font-size: 20px;
+     }
+     #check:checked~ul {
+         left: 0;
+     }
+     .form-control {
+         padding: 10px 24px;
+         /* Some padding */
+         cursor: pointer;
+         /* Pointer/hand icon */
+         width: 50%;
+         /* Set a width if needed */
+         display: block;
+         height: 40px;
+     }
+     .btn {
+         padding: 0 24px;
+         /* Some padding */
+         cursor: pointer;
+         /* Pointer/hand icon */
+         width: 50%;
+         /* Set a width if needed */
+         display: block;
+         height: 40px;
+     }
+     .carousel-control-prev,
+     .carousel-control-next {
+         display: none;
+     }
+     .carousel-thumbnails .carousel-indicators li {
+         display: none;
+     }
+     .carousel-inner {
+         padding-top: 21%;
+     }
+     .btn-primary {
+         width: 100%;
+     }
+ }
+ 
+ .nav-item a {
+     color: white !important;
+     text-shadow: #2a2a2a !important;
+ }
+ 
+ .dropdown-menu a {
+     color: #2a2a2a !important;
+ }
+ 
+ .basliq {
+     border-radius: 5em;
+ }
+ 
+ .btn {
+     color: white;
+     border-color: white;
+ }
+ 
+ .btn-outline-success:hover {
+     background-color: rgb(127, 127, 131);
+     border-color: rgb(127, 127, 131);
+     outline: none;
+     box-shadow: none;
+ }
+ 
+ body {
+     margin: 0;
+     padding: 0;
+     overflow-x: hidden;
+     /* Hide vertical scrollbar */
+     align-items: center;
+     min-height: 100vh;
+ }
+ 
+ .container {
+     text-align: center;
+     font-family: 'Baloo Thambi 2', cursive;
+     text-size-adjust: large;
+ }
+ 
+ .container.mt-4 {
+     text-align: justify;
+ }
+ /**************Karusel*************/
+ 
+ .carousel-thumbnails .carousel-indicators img {
+     max-width: 100px;
+     height: 50px;
+     overflow: hidden;
+     display: block;
+ }
+ 
+ .carousel-thumbnails .carousel-indicators li {
+     height: auto;
+     max-width: 100px;
+     width: 100px;
+     border: none;
+     box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75);
+     &.active {
+         border-bottom: 4px solid #fff;
+     }
+ }
+ /*Karuselin ID-si */
+ 
+ #carousel-thumb {
+     bottom: 100px;
+ }
+ /**************Cards***********/
+ 
+ .main-area {
+     padding: 0 100px;
+ }
+ 
+ .card {
+     background: white;
+     margin-bottom: 2em;
+ }
+ 
+ .card-content h2 {
+     margin-top: 0;
+     margin-bottom: .5em;
+     font-weight: normal;
+ }
+ 
+ .card-content p {
+     font-size: 95%;
+ }
+ 
+ @media screen and (min-width: 40em) {
+     .cards {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+     }
+     .card {
+         flex: 0 1 calc(53% - .5em);
+         margin-bottom: 1em;
+     }
+ }
+ 
+ @media screen and (min-width: 60em) {
+     .cards {
+         margin-top: inherit;
+     }
+     .card {
+         flex: 0 1 calc(33% - 1em);
+         margin-bottom: 2em;
+     }
+ }
